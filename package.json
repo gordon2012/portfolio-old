@@ -20,9 +20,15 @@
   "homepage": "https://github.com/gordon2012/portfolio#readme",
   "devDependencies": {
     "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.16.0",
+    "node-sass": "^3.6.0",
+    "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "jquery": "^2.2.3"
   }
 }

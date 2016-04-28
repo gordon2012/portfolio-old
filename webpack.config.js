@@ -2,7 +2,8 @@ var HtmlWebPackPlugin = require('html-webpack-plugin');
 var HtmlWebPackPluginConfig = new HtmlWebPackPlugin({
 	template: __dirname + '/src/index.html',
 	filename: 'index.html',
-	inject: 'body'
+	inject: 'body',
+	cache: false
 });
 
 module.exports = {
@@ -15,7 +16,7 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{test: /\.css$/, loader: 'style-loader!css-loader'}
+			{test: /\.css$/, loader: 'style-loader!css-loader!sass-loader'},
 		]
 	},
 	plugins: [HtmlWebPackPluginConfig]
