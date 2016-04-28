@@ -8,3 +8,4 @@ A basic front end development project for FreeCodeCamp
 ## DONE:
 - initial commit
 - transfer from codepen
+	- fix typos
