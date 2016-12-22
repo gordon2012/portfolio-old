@@ -1,0 +1,69 @@
+$break-mobile: 599px
+$break-tablet: 600px
+$break-laptop: 900px
+$break-desktop: 1200px
+$break-lg-desktop: 1800px
+
+@mixin mobile
+    @media (max-width: $break-mobile)
+        @content
+@mixin tablet
+    @media (min-width: $break-tablet)
+        @content
+@mixin laptop
+    @media (min-width: $break-laptop)
+        @content
+@mixin desktop
+    @media (min-width: $break-desktop)
+        @content
+@mixin large-desktop
+    @media (min-width: $break-lg-desktop)
+        @content
+
+$grey-200: #EEEEEE
+$grey-600: #757575
+
+body
+    margin: 0
+
+h1
+    margin: 0
+    padding: 16px 8px
+    text-align: center
+
+header, footer
+    background: $grey-600
+    color: white
+
+footer
+    padding: 8px 0
+    display: flex
+    justify-content: center
+
+.app
+    background: $grey-200
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+
+.content-wrap
+    flex: 1
+    display: flex
+    justify-content: center
+
+.content
+    background: white
+    flex-basis: calc(#{$break-laptop} - 32px)
+    padding: 16px
+
+    h2
+        border-left: 4px solid black
+        padding-left: 16px
+
+button
+    min-width: 64px
+
+span
+    margin: 16px
+    h1
+        display: inline
