@@ -4,15 +4,3 @@ export function setState(state) {
         state
     };
 }
-
-export function increment() {
-    return {
-        type: 'INCREMENT'
-    };
-}
-
-export function decrement() {
-    return {
-        type: 'DECREMENT'
-    };
-}
