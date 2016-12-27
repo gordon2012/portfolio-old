@@ -12,12 +12,12 @@ export default class App extends Component {
         <header>
           <div className="nav">
 
-            <div><img src={gdsphere} alt=""/></div>
-            <nav>
-              <button>About</button>
-              <button>Work</button>
-              <button>Contact</button>
-            </nav>
+            <div className="brand"><img src={gdsphere} alt=""/></div>
+
+            <div className="button-wrap"><button>ABOUT</button></div>
+            <div className="button-wrap"><button>WORK</button></div>
+            <div className="button-wrap"><button>CONTACT</button></div>
+
           
           </div>
           <h1>Gordon Doskas</h1>
