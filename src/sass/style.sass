@@ -23,18 +23,90 @@ $break-lg-desktop: 1800px
 $grey-200: #EEEEEE
 $grey-600: #757575
 
-body
+$indigo-50:  #E8EAF6
+$indigo-100: #C5CAE9
+$indigo-200: #9FA8DA
+$indigo-300: #7986CB
+$indigo-400: #5C6BC0
+$indigo-500: #3F51B5
+$indigo-600: #3949AB
+$indigo-700: #303F9F
+$indigo-800: #283593
+$indigo-900: #1A237E
+
+
+// Globals
+//
+body, section, h2
     margin: 0
+    padding: 0
 
 h1
     margin: 0
     padding: 16px 8px
     text-align: center
+    font-size: 96px
+
+h2
+    border: 2px solid red
+    //
+    margin-bottom: 16px
+    text-align: center
 
 header, footer
-    background: $grey-600
+    background: $indigo-600
     color: white
 
+section
+    min-height: 1vh
+
+
+// Shared
+//
+.content-inner
+    border: 2px solid lime
+    //
+    margin: 16px 0
+    padding: 16px
+    flex-basis: calc(#{$break-laptop} - 32px)
+    display: flex
+    flex-direction: column
+
+
+// About section
+//
+section.about
+    .content-inner
+        flex-basis: calc(#{$break-tablet} - 32px)
+    background: $indigo-50
+    color: $indigo-800
+
+img.headshot
+    height: 200px
+    width: 200px
+    border-radius: 50%
+
+div.center
+    display: flex
+    justify-content: center
+
+
+// Work section
+//
+section.work
+    background: $indigo-200
+    color: $indigo-900
+
+
+// Contact section
+//
+section.contact
+    background: $indigo-50
+    color: $indigo-800
+
+
+// Misc
+//
 footer
     padding: 8px 0
     display: flex
@@ -46,16 +118,12 @@ footer
     min-height: 100vh
     flex-direction: column
 
-.content-wrap
+.content
     flex: 1
+
+section
     display: flex
     justify-content: center
 
-.content
-    background: white
-    flex-basis: calc(#{$break-laptop} - 32px)
-    padding: 16px
-
-    h2
-        border-left: 4px solid black
-        padding-left: 16px
+.blurb
+    font-size: 24px
