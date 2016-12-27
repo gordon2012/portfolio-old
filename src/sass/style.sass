@@ -41,15 +41,7 @@ body, section, h2
     margin: 0
     padding: 0
 
-h1
-    margin: 0
-    padding: 16px 8px
-    text-align: center
-    font-size: 96px
-
 h2
-    border: 2px solid red
-    //
     margin-bottom: 16px
     text-align: center
 
@@ -57,20 +49,50 @@ header, footer
     background: $indigo-600
     color: white
 
-section
-    min-height: 1vh
-
 
 // Shared
 //
 .content-inner
-    border: 2px solid lime
-    //
     margin: 16px 0
     padding: 16px
     flex-basis: calc(#{$break-laptop} - 32px)
     display: flex
     flex-direction: column
+
+
+// Header
+//
+header
+    h1
+        margin: 0
+        padding: 16px 8px
+        text-align: center
+        font-size: 72px
+        @include mobile
+            font-size: 64px
+    nav
+        margin: 8px
+        display: flex
+        flex-wrap: wrap
+        div
+            display: flex
+            padding: 16px 0
+            height: 66px
+            flex-basis: 25%
+            @include mobile
+                flex-basis: 50%
+            img
+                height: 100px
+        div.button-wrap
+            justify-content: center
+        div.brand
+            padding: 0
+        button
+            flex-basis: 128px
+            font-size: 18px
+            font-weight: 900
+            color: $indigo-900
+            border-radius: 8px
 
 
 // About section

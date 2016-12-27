@@ -9,84 +9,66 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <header>
-          <div className="nav">
 
-            <div><img src={gdsphere} alt=""/></div>
-            <nav>
-              <button>About</button>
-              <button>Work</button>
-              <button>Contact</button>
-            </nav>
-          
-          </div>
+        <header>
+          <nav>
+            <div className="brand"><img src={gdsphere} alt=""/></div>
+            <div className="button-wrap"><button>ABOUT</button></div>
+            <div className="button-wrap"><button>WORK</button></div>
+            <div className="button-wrap"><button>CONTACT</button></div>
+          </nav>
           <h1>Gordon Doskas</h1>
         </header>
         
-        
-        
-          <div className="content">
+        <div className="content">
 
-            <section className="about">
-              <div className="content-inner">
-                <h2>About Me</h2>
-                <div className="center"><img src={gordon} className="headshot" alt=""/></div>
-
-                <p className="blurb"><strong>Gordon is a creator</strong> of websites, experiences, and worlds with a focus on development and architecture but with an eye for design.</p>
-
+          <section className="about">
+            <div className="content-inner">
+              <h2>About Me</h2>
+              <div className="center"><img src={gordon} className="headshot" alt=""/></div>
+              <p className="blurb"><strong>Gordon is a creator</strong> of websites, experiences, and worlds with a focus on development and architecture but with an eye for design.</p>
+              <div>
+                <h3>My Skills</h3>
                 <div>
-                  <h3>My Skills</h3>
-                  
-                  <div>
-                    <div>A Skill</div>
-                    <div>A Skill</div>
-                    <div>A Skill</div>
-                    <div>A Skill</div>
-                    <div>A Skill</div>
-                    <div>A Skill</div>
-                  </div>
-
+                  <div>A Skill</div>
+                  <div>A Skill</div>
+                  <div>A Skill</div>
+                  <div>A Skill</div>
+                  <div>A Skill</div>
+                  <div>A Skill</div>
                 </div>
-
               </div>
-            </section>
+            </div>
+          </section>
 
-
-            <section className="work">
-              <div className="content-inner">
-                <h2>My Work</h2>
-
-
-                <div>
-                  <div>A Project</div>
-                  <div>A Project</div>
-                  <div>A Project</div>
-                  <div>A Project</div>
-                  <div>A Project</div>
-                  <div>A Project</div>
-                </div>
-
+          <section className="work">
+            <div className="content-inner">
+              <h2>My Work</h2>
+              <div>
+                <div>A Project</div>
+                <div>A Project</div>
+                <div>A Project</div>
+                <div>A Project</div>
+                <div>A Project</div>
+                <div>A Project</div>
               </div>
-            </section>
+            </div>
+          </section>
 
-            <section className="contact">
-              <div className="content-inner">
-                <h2>Contact Me</h2>
-
-                <div>
-                  <div>A Link</div>
-                  <div>A Link</div>
-                  <div>A Link</div>
-                  <div>A Link</div>
-                  <div>A Link</div>
-                  <div>A Link</div>
-                </div>
-
-
+          <section className="contact">
+            <div className="content-inner">
+              <h2>Contact Me</h2>
+              <div>
+                <div>A Link</div>
+                <div>A Link</div>
+                <div>A Link</div>
+                <div>A Link</div>
+                <div>A Link</div>
+                <div>A Link</div>
               </div>
-            </section>
+            </div>
+          </section>
 
-          
         </div>
         <footer>Copyright 2016 Gordon Doskas</footer>
       </div>
