@@ -56,6 +56,9 @@ section
 // Shared
 //
 .content-inner
+    // box-sizing: border-box
+    // border: 1px solid red
+    //
     margin: 16px 0
     padding: 16px
     flex-basis: calc(#{$break-laptop} - 32px)
@@ -120,9 +123,59 @@ div.center
 
 // Work section
 //
+$transition: 0.5s
+$perspective: 700px
+$timing: cubic-bezier(.1,.2,.9,.8)
+//
+$work-item-padding: 8px
+//
 section.work
-    background: $indigo-200
+    background: $indigo-100
     color: $indigo-900
+
+    .work-wrap
+        display: flex
+        flex-flow: row wrap
+
+        .work-item
+            box-sizing: border-box
+            padding: $work-item-padding
+            height: calc(200px + #{$work-item-padding} * 2)
+            display: block
+            position: relative
+            flex: 1 50%
+
+            .work-item-front, .work-item-back
+                display: block
+                position: absolute
+                height: calc(100% - #{$work-item-padding} * 2)
+                width: calc(100% - #{$work-item-padding} * 2)
+                backface-visibility: hidden
+                transition: transform $transition $timing 0s
+
+            .work-item-front
+                box-sizing: border-box
+                border: 8px solid $indigo-900
+                background-repeat: no-repeat
+                background-size: cover
+                transform: perspective($perspective) rotateY(0deg)
+
+            .work-item-back
+                color: white
+                background: $indigo-900
+                transform: perspective($perspective) rotateY(180deg)
+                display: flex
+                justify-content: center
+                span
+                    align-self: center
+                    font-size: 36px
+
+            &:hover
+                .work-item-front
+                    transform: perspective($perspective) rotateY(-180deg)
+
+                .work-item-back
+                    transform: perspective($perspective) rotateY(0deg)
 
 
 // Contact section
