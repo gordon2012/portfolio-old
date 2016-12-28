@@ -6,6 +6,10 @@ import gdsphere from '../images/gdsphere4.svg';
 import gordon from '../images/gordon.jpg';
 
 export default class App extends Component {
+  scrollToAnchor(anchor) {
+    document.querySelector(`#${anchor}`).scrollIntoView();
+  }
+
   render() {
     return (
       <div className="app">
@@ -13,16 +17,16 @@ export default class App extends Component {
         <header>
           <nav>
             <div className="brand"><img src={gdsphere} alt=""/></div>
-            <div className="button-wrap"><button>ABOUT</button></div>
-            <div className="button-wrap"><button>WORK</button></div>
-            <div className="button-wrap"><button>CONTACT</button></div>
+            <div className="button-wrap"><button onClick={e => { this.scrollToAnchor('about'); }}>ABOUT</button></div>
+            <div className="button-wrap"><button onClick={e => { this.scrollToAnchor('work'); }}>WORK</button></div>
+            <div className="button-wrap"><button onClick={e => { this.scrollToAnchor('contact'); }}>CONTACT</button></div>
           </nav>
           <h1>Gordon Doskas</h1>
         </header>
         
         <div className="content">
 
-          <section className="about">
+          <section className="about" id="about">
             <div className="content-inner">
               <h2>About Me</h2>
               <div className="center"><img src={gordon} className="headshot" alt=""/></div>
@@ -41,7 +45,7 @@ export default class App extends Component {
             </div>
           </section>
 
-          <section className="work">
+          <section className="work" id="work">
             <div className="content-inner">
               <h2>My Work</h2>
               <div>
@@ -55,7 +59,7 @@ export default class App extends Component {
             </div>
           </section>
 
-          <section className="contact">
+          <section className="contact" id="contact">
             <div className="content-inner">
               <h2>Contact Me</h2>
               <div>
