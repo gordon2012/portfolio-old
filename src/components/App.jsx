@@ -11,6 +11,7 @@ export default class App extends Component {
   }
 
   render() {
+    const {projects} = this.props;
     return (
       <div className="app">
 
@@ -48,13 +49,16 @@ export default class App extends Component {
           <section className="work" id="work">
             <div className="content-inner">
               <h2>My Work</h2>
-              <div>
-                <div>A Project</div>
-                <div>A Project</div>
-                <div>A Project</div>
-                <div>A Project</div>
-                <div>A Project</div>
-                <div>A Project</div>
+              <div className="work-wrap">
+                {projects.map( (e,i) => {
+                  const thumb = require(`../images/${e.thumb}`);
+                  return (
+                    <div className="work-item" key={i}>
+                      <div className="work-item-front"  style={{backgroundImage: `url(${thumb})`}}></div>
+                      <div className="work-item-back"><span>{e.name}</span></div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>
@@ -81,9 +85,7 @@ export default class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return {
-    count: state.count
-  }
+  return state;
 }
 
 export const AppContainer = connect(
