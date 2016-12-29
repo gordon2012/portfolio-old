@@ -200,6 +200,28 @@ section.contact
     background: $indigo-50
     color: $indigo-800
 
+    .contact-wrap
+        display: flex
+        flex-flow: row wrap
+
+        .contact-item-wrap
+            padding: 16px 0
+            flex-basis: 50%
+            @include tablet
+                flex-basis: 33.33%
+
+            display: flex
+            justify-content: center
+
+            .contact-item-border
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                cursor: pointer
+
+                .contact-item-inner
+                    align-self: center
+
 
 // Misc
 //

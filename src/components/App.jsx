@@ -11,7 +11,8 @@ export default class App extends Component {
   }
 
   render() {
-    const {projects} = this.props;
+    const {projects, social} = this.props;
+
     return (
       <div className="app">
 
@@ -56,7 +57,7 @@ export default class App extends Component {
                   const thumb = require(`../images/${e.thumb}`);
                   return (
                     <div className="work-item" key={i}>
-                      <div className="work-item-front"  style={{backgroundImage: `url(${thumb})`}}></div>
+                      <div className="work-item-front" style={{backgroundImage: `url(${thumb})`}}></div>
                       <div className="work-item-back"><span>{e.name}</span></div>
                     </div>
                   );
@@ -68,13 +69,19 @@ export default class App extends Component {
           <section className="contact" id="contact">
             <div className="content-inner">
               <h2>Contact Me</h2>
-              <div>
-                <div>A Link</div>
-                <div>A Link</div>
-                <div>A Link</div>
-                <div>A Link</div>
-                <div>A Link</div>
-                <div>A Link</div>
+              <div className="contact-wrap">
+
+                {social.map( (e,i) =>
+                  <div key={i} className="contact-item-wrap">
+                    <div className="contact-item-border" style={{width: e.outerSize, height: e.outerSize, backgroundColor: e.bgcolor }} onClick={f => { window.open(e.url, '_blank'); }}>
+                      <div className="contact-item-inner" style={{width: e.innerSize, height: e.innerSize }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                          {e.path.map( (f,k) => <path key={k} fill={e.color} d={f}></path> )}
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </section>
