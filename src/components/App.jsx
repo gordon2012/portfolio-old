@@ -16,12 +16,14 @@ export default class App extends Component {
       <div className="app">
 
         <header>
-          <nav>
+          <div className="nav">
             <div className="brand"><img src={gdsphere} alt=""/></div>
-            <div className="button-wrap"><button onClick={e => { this.scrollToAnchor('about'); }}>ABOUT</button></div>
-            <div className="button-wrap"><button onClick={e => { this.scrollToAnchor('work'); }}>WORK</button></div>
-            <div className="button-wrap"><button onClick={e => { this.scrollToAnchor('contact'); }}>CONTACT</button></div>
-          </nav>
+            <nav>
+              <div onClick={e => { this.scrollToAnchor('about'); }}>ABOUT</div>
+              <div onClick={e => { this.scrollToAnchor('work'); }}>WORK</div>
+              <div onClick={e => { this.scrollToAnchor('contact'); }}>CONTACT</div>
+            </nav>
+          </div>
           <h1>Gordon Doskas</h1>
         </header>
         
