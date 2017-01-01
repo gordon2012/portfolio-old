@@ -124,10 +124,14 @@ section.about
         flex-flow: row wrap
 
         .skill-item-wrap
-            flex-basis: 25%
-            padding: 16px
+            flex-basis: 50%
+            @include tablet
+                flex-basis: 33%
+            @include laptop
+                flex-basis: 25%
 
             .skill-item
+                margin: 16px
                 text-align: center
                 padding: 8px
                 border-radius: 8px
