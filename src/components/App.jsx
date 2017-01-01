@@ -11,7 +11,7 @@ export default class App extends Component {
   }
 
   render() {
-    const {projects, social} = this.props;
+    const {projects, social, skills} = this.props;
 
     return (
       <div className="app">
@@ -37,13 +37,16 @@ export default class App extends Component {
               <p className="blurb"><strong>Gordon is a creator</strong> of websites, experiences, and worlds with a focus on development and architecture but with an eye for design.</p>
               <div>
                 <h3>My Skills</h3>
-                <div>
-                  <div>A Skill</div>
-                  <div>A Skill</div>
-                  <div>A Skill</div>
-                  <div>A Skill</div>
-                  <div>A Skill</div>
-                  <div>A Skill</div>
+                <div className="skills-wrap">
+
+                  {skills.map( (e,i) => {
+                    return (
+                      <div key={i} className="skill-item-wrap">
+                        <div className="skill-item">{e}</div>
+                      </div>
+                    );
+                  })}
+
                 </div>
               </div>
             </div>
