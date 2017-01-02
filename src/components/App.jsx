@@ -5,6 +5,8 @@ import * as actionCreators from '../action_creators';
 import gdsphere from '../images/gdsphere4.svg';
 import gordon from '../images/gordon.jpg';
 
+import Modal from './Modal';
+
 export default class App extends Component {
   scrollToAnchor(anchor) {
     document.querySelector(`#${anchor}`).scrollIntoView();
@@ -15,6 +17,8 @@ export default class App extends Component {
 
     return (
       <div className="app">
+
+        <Modal />
 
         <header>
           <div className="nav">
