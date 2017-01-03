@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import elementClass from 'element-class';
+
 import * as actionCreators from '../action_creators';
 
 import gdsphere from '../images/gdsphere4.svg';
@@ -14,6 +16,14 @@ export default class App extends Component {
 
   render() {
     const {projects, social, skills, project, setProject} = this.props;
+
+    // Add class to body that prevents scrolling
+    //
+    if(project === -1)
+      elementClass(document.body).remove('modal-active');
+    else
+      elementClass(document.body).add('modal-active');
+    //
 
     return (
       <div className="app">
