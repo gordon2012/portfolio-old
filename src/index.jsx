@@ -22,7 +22,7 @@ store.dispatch(setState({
   projects: [
     {
       name: 'Camper Leaderboard',
-      description: 'Find out who has the most brownie points on FreeCodeCamp over the past 30 days or all time',
+      description: ['Find out who has the most brownie points on FreeCodeCamp over the past 30 days or all time'],
       site: 'gordon2012.github.io/leaderboard',
       github: 'github.com/gordon2012/leaderboard',
       thumb: '1.png'
@@ -30,7 +30,7 @@ store.dispatch(setState({
 
     {
       name: 'Markdown Previewer',
-      description: 'Markdown Previewer allows one to enter markdown into a text box and have a live preview display what it looks like styled.<br><br>Technologies used: React, Marked, Webpack, Travis CI',
+      description: ['Markdown Previewer allows one to enter markdown into a text box and have a live preview display what it looks like styled.', 'Technologies used: React, Marked, Webpack, Travis CI'],
       site: 'gordon2012.github.io/markdown',
       github: 'github.com/gordon2012/markdown',
       thumb: '2.png'
@@ -38,7 +38,7 @@ store.dispatch(setState({
 
     {
       name: 'Calculator',
-      description: 'A JavaScript powered calculator',
+      description: ['A JavaScript powered calculator'],
       site: 'gordon2012.github.io/calculator',
       github: 'github.com/gordon2012/calculator',
       thumb: '3.png'
@@ -46,7 +46,7 @@ store.dispatch(setState({
 
     {
       name: 'Random Quote Machine',
-      description: 'A random quote generator',
+      description: ['A random quote generator'],
       site: 'gordon2012.github.io/quote',
       github: 'github.com/gordon2012/quote',
       thumb: '4.png'
@@ -54,7 +54,7 @@ store.dispatch(setState({
 
     {
       name: 'Wikipedia Search',
-      description: 'An implementation of Wikipedia search that uses its search API',
+      description: ['An implementation of Wikipedia search that uses its search API'],
       site: 'gordon2012.github.io/wikiviewer',
       github: 'github.com/gordon2012/wikiviewer',
       thumb: '5.png'
@@ -62,7 +62,7 @@ store.dispatch(setState({
 
     {
       name: 'Twitch.tv Status',
-      description: 'An app that monitors the status of Twitch.tv streamers.<br><br>Technologies used: React, Sass, Webpack',
+      description: ['An app that monitors the status of Twitch.tv streamers.', 'Technologies used: React, Sass, Webpack'],
       site: 'gordon2012.github.io/twitch',
       github: 'github.com/gordon2012/twitch',
       thumb: '6.png'
@@ -146,7 +146,10 @@ store.dispatch(setState({
     'Git',
     'Wordpress',
     'D3'
-  ]
+  ],
+
+  project: -1
+
 }));
 
 ReactDOM.render(

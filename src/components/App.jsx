@@ -5,16 +5,25 @@ import * as actionCreators from '../action_creators';
 import gdsphere from '../images/gdsphere4.svg';
 import gordon from '../images/gordon.jpg';
 
+import Modal from './Modal';
+
 export default class App extends Component {
   scrollToAnchor(anchor) {
     document.querySelector(`#${anchor}`).scrollIntoView();
   }
 
   render() {
-    const {projects, social, skills} = this.props;
+    const {projects, social, skills, project, setProject} = this.props;
 
     return (
       <div className="app">
+
+        {project === -1
+          ?
+            null
+          :
+            <Modal setProject={setProject} project={projects[project]}/>
+        }
 
         <header>
           <div className="nav">
@@ -59,7 +68,7 @@ export default class App extends Component {
                 {projects.map( (e,i) => {
                   const thumb = require(`../images/${e.thumb}`);
                   return (
-                    <div className="work-item" key={i}>
+                    <div className="work-item" onClick={e => { setProject(i); }} key={i}>
                       <div className="work-item-front" style={{backgroundImage: `url(${thumb})`}}></div>
                       <div className="work-item-back"><span>{e.name}</span></div>
                     </div>
