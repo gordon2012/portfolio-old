@@ -52,8 +52,27 @@ header, footer
 section
     min-height: 800px
 
+
+// Modal
+//
 body.modal-active
     overflow: hidden
+
+.modal-overlay
+
+
+.modal-wrapper
+    height: 85vh
+    margin-left: 40px
+    margin-right: 40px
+    @include tablet
+        height: 80vh
+        margin-left: 60px
+        margin-right: 60px
+    @include laptop
+        height: 75vh
+        margin-left: 80px
+        margin-right: 80px
 
 
 // Shared
