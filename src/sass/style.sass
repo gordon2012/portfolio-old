@@ -52,8 +52,26 @@ header, footer
 section
     min-height: 800px
 
+
+// Modal
+//
 body.modal-active
     overflow: hidden
+
+.modal-wrapper
+    right: 24px
+    bottom: 24px
+    left: 24px
+    @include tablet
+        top: 48px !important
+        right: 48px
+        bottom: 48px
+        left: 48px
+    @include laptop
+        top: 72px !important
+        right: 72px
+        bottom: 72px
+        left: 72px
 
 
 // Shared

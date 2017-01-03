@@ -1,6 +1,27 @@
 import React, { Component } from 'react';
 
 export default class Modal extends Component {
+    constructor(...args) {
+        super(...args);
+        this._updateTopPad = this._updateTopPad.bind(this);
+    }
+
+    _updateTopPad() {
+        this.setState({topPad: screen.height - window.innerHeight});
+    }
+    
+    componentWillMount() {
+        this._updateTopPad();
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this._updateTopPad);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this._updateTopPad);
+    }
+
     render() {
         const styles = {
 
@@ -12,16 +33,14 @@ export default class Modal extends Component {
                 right: 0,
                 bottom: 0,
                 left: 0,
-                display: 'flex'
             },
 
             wrapper: {
                 border: '8px solid #1A237E',
                 background: 'white',
                 flex: 1,
-                height: '75vh',
-                alignSelf: 'center',
-                margin: '0 64px',
+                position: 'absolute',
+                top: 80 - this.state.topPad,
                 padding: '0 32px',
             }
         };
@@ -29,8 +48,8 @@ export default class Modal extends Component {
         const {project, setProject} = this.props;
 
         return (
-            <div style={styles.overlay}>
-                <div style={styles.wrapper}>
+            <div style={styles.overlay} className="modal-overlay">
+                <div style={styles.wrapper}  className="modal-wrapper">
                     <h3>{project.name}</h3>
                     {project.description.map( (e,i) => <p key={i}>{e}</p>)}
                     <button onClick={e => { setProject(-1); }}>Close</button>
