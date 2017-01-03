@@ -18,7 +18,7 @@ export default class Modal extends Component {
         window.addEventListener('resize', this._updateTopPad);
     }
 
-    componentWillUnMount() {
+    componentWillUnmount() {
         window.removeEventListener('resize', this._updateTopPad);
     }
 
@@ -36,7 +36,7 @@ export default class Modal extends Component {
                 right: 0,
                 bottom: 0,
                 left: 0,
-                display: 'flex'
+                // display: 'flex'
             },
 
             wrapper: {
@@ -46,9 +46,12 @@ export default class Modal extends Component {
                 // height: '75vh',
                 // alignSelf: 'center',
                 // margin: '0 64px',
-                marginTop: 50 - this.state.topPad,
-                // position: 'absolute',
-                // top: 24,
+                // marginTop: 100 - this.state.topPad,
+                position: 'absolute',
+                top: 80 - this.state.topPad,
+                // right: 24,
+                // bottom: 24,
+                // left: 24,
                 padding: '0 32px',
             }
         };
