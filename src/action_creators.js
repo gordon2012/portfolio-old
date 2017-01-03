@@ -4,3 +4,10 @@ export function setState(state) {
         state
     };
 }
+
+export function setProject(project) {
+    return {
+        type: 'SET_PROJECT',
+        project
+    };
+}
