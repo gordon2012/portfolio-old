@@ -23,8 +23,6 @@ export default class Modal extends Component {
     }
 
     render() {
-        //const topPad = screen
-
         const styles = {
 
             overlay: {
@@ -32,33 +30,22 @@ export default class Modal extends Component {
                 background: 'rgba(0,0,0,0.5)',
                 position: 'fixed',
                 top: 0,
-                // top: 60 - this.state.topPad,
                 right: 0,
                 bottom: 0,
                 left: 0,
-                // display: 'flex'
             },
 
             wrapper: {
                 border: '8px solid #1A237E',
                 background: 'white',
                 flex: 1,
-                // height: '75vh',
-                // alignSelf: 'center',
-                // margin: '0 64px',
-                // marginTop: 100 - this.state.topPad,
                 position: 'absolute',
                 top: 80 - this.state.topPad,
-                // right: 24,
-                // bottom: 24,
-                // left: 24,
                 padding: '0 32px',
             }
         };
 
         const {project, setProject} = this.props;
-
-        // console.log(window.innerHeight, window.);
 
         return (
             <div style={styles.overlay} className="modal-overlay">
@@ -66,10 +53,6 @@ export default class Modal extends Component {
                     <h3>{project.name}</h3>
                     {project.description.map( (e,i) => <p key={i}>{e}</p>)}
                     <button onClick={e => { setProject(-1); }}>Close</button>
-                    <p>window innerHeight: {window.innerHeight}</p>
-                    <p>screen height: {screen.height}</p>
-                    <p>screen availHeight: {screen.availHeight}</p>
-                    <p>top pad: {this.state.topPad}</p>
                 </div>
             </div>
         );
