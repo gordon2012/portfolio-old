@@ -36,12 +36,8 @@ export default class Modal extends Component {
             },
 
             wrapper: {
-                border: '8px solid #1A237E',
-                background: 'white',
-                flex: 1,
                 position: 'absolute',
                 top: 80 - this.state.topPad,
-                padding: '0 32px',
             }
         };
 
@@ -49,10 +45,20 @@ export default class Modal extends Component {
 
         return (
             <div style={styles.overlay} className="modal-overlay">
-                <div style={styles.wrapper}  className="modal-wrapper">
-                    <h3>{project.name}</h3>
-                    {project.description.map( (e,i) => <p key={i}>{e}</p>)}
-                    <button onClick={e => { setProject(-1); }}>Close</button>
+                <div style={styles.wrapper} className="modal-wrapper">
+
+                    <div className="modal-inner">
+                        <span className="modal-close" onClick={e => { setProject(-1); }}> X  </span>
+                        <h3 className="">{project.name}</h3>
+                        <div className="text-wrap">
+                            {project.description.map( (e,i) => <p key={i}>{e}</p>)}
+                        </div>
+                        <div className="button-wrap">
+                            <a href={project.site} onClick={e => { e.preventDefault(); window.open(project.site, '_blank'); }}>Site</a>
+                            <a href={project.github} onClick={e => { e.preventDefault(); window.open(project.github, '_blank'); }}>GitHub</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         );

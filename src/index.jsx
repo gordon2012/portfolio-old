@@ -23,48 +23,48 @@ store.dispatch(setState({
     {
       name: 'Camper Leaderboard',
       description: ['Find out who has the most brownie points on FreeCodeCamp over the past 30 days or all time'],
-      site: 'gordon2012.github.io/leaderboard',
-      github: 'github.com/gordon2012/leaderboard',
+      site: 'http://gordon2012.github.io/leaderboard',
+      github: 'https://github.com/gordon2012/leaderboard',
       thumb: '1.png'
     },
 
     {
       name: 'Markdown Previewer',
       description: ['Markdown Previewer allows one to enter markdown into a text box and have a live preview display what it looks like styled.', 'Technologies used: React, Marked, Webpack, Travis CI'],
-      site: 'gordon2012.github.io/markdown',
-      github: 'github.com/gordon2012/markdown',
+      site: 'http://gordon2012.github.io/markdown',
+      github: 'https://github.com/gordon2012/markdown',
       thumb: '2.png'
     },
 
     {
       name: 'Calculator',
       description: ['A JavaScript powered calculator'],
-      site: 'gordon2012.github.io/calculator',
-      github: 'github.com/gordon2012/calculator',
+      site: 'http://gordon2012.github.io/calculator',
+      github: 'https://github.com/gordon2012/calculator',
       thumb: '3.png'
     },
 
     {
       name: 'Random Quote Machine',
       description: ['A random quote generator'],
-      site: 'gordon2012.github.io/quote',
-      github: 'github.com/gordon2012/quote',
+      site: 'http://gordon2012.github.io/quote',
+      github: 'https://github.com/gordon2012/quote',
       thumb: '4.png'
     },
 
     {
       name: 'Wikipedia Search',
       description: ['An implementation of Wikipedia search that uses its search API'],
-      site: 'gordon2012.github.io/wikiviewer',
-      github: 'github.com/gordon2012/wikiviewer',
+      site: 'http://gordon2012.github.io/wikiviewer',
+      github: 'https://github.com/gordon2012/wikiviewer',
       thumb: '5.png'
     },
 
     {
       name: 'Twitch.tv Status',
       description: ['An app that monitors the status of Twitch.tv streamers.', 'Technologies used: React, Sass, Webpack'],
-      site: 'gordon2012.github.io/twitch',
-      github: 'github.com/gordon2012/twitch',
+      site: 'http://gordon2012.github.io/twitch',
+      github: 'https://github.com/gordon2012/twitch',
       thumb: '6.png'
     }
   ],
