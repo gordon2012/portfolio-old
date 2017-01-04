@@ -41,7 +41,7 @@ export default class Modal extends Component {
                 flex: 1,
                 position: 'absolute',
                 top: 80 - this.state.topPad,
-                padding: '0 32px',
+                // padding: '0 32px',
             }
         };
 
@@ -49,10 +49,25 @@ export default class Modal extends Component {
 
         return (
             <div style={styles.overlay} className="modal-overlay">
-                <div style={styles.wrapper}  className="modal-wrapper">
-                    <h3>{project.name}</h3>
-                    {project.description.map( (e,i) => <p key={i}>{e}</p>)}
-                    <button onClick={e => { setProject(-1); }}>Close</button>
+                <div style={styles.wrapper} className="modal-wrapper">
+
+
+                    <div className="modal-inner">
+                        <span className="modal-close" onClick={e => { setProject(-1); }}> X  </span>
+
+                        <h3 className="">{project.name}</h3>
+
+                        <div>
+                            {project.description.map( (e,i) => <p key={i}>{e}</p>)}
+                        </div>
+
+                        <img src={require(`../images/${project.thumb}`)} alt=""/>
+
+                        <div><a href={`http://${project.site}`} onClick={e => { alert('alert!'); e.preventDefault(); }}>Visit Site</a></div>
+                        <div><a href="">GitHub repo</a></div>
+
+                    </div>
+
                 </div>
             </div>
         );

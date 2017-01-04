@@ -49,16 +49,31 @@ header, footer
     background: $indigo-600
     color: white
 
-section
-    min-height: 800px
+// Debug
+//
+$debug: true
+@mixin border ($color: black, $hover: $color, $style: solid, $size: 1px)
+    @if $debug
+        outline: $size $style $color
+        outline-offset: -$size
+        &:hover
+            outline-color: $hover
+
+*
+    // @include border(magenta, lime)
 
 
+//
 // Modal
 //
 body.modal-active
     overflow: hidden
 
 .modal-wrapper
+    // @include border(orange)
+
+    // padding: 0 !important
+
     right: 24px
     bottom: 24px
     left: 24px
@@ -72,6 +87,38 @@ body.modal-active
         right: 72px
         bottom: 72px
         left: 72px
+
+.modal-inner
+    @include border(magenta, magenta, dashed, 4px)
+
+    // margin: 0 64px
+    h3
+        @include border(green)
+        margin: 0
+
+    p
+        @include border(red)
+
+    img
+        @include border(lime, lime, dashed, 2px)
+
+    div
+        // border: 1px solid red
+
+
+.modal-close
+    border: 8px solid $indigo-900
+    background: white
+    color: $indigo-900
+    border-radius: 50%
+    padding: 2px 6px
+    font-size: 26px
+    font-weight: 600
+
+    position: absolute
+    top: -16px
+    right: -16px
+    cursor: pointer
 
 
 // Shared
