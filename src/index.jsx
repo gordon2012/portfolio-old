@@ -148,7 +148,7 @@ store.dispatch(setState({
     'D3'
   ],
 
-  project: 1
+  project: -1
 
 }));
 

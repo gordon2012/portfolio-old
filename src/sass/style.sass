@@ -49,6 +49,7 @@ header, footer
     background: $indigo-600
     color: white
 
+
 // Debug
 //
 $debug: false
@@ -56,23 +57,14 @@ $debug: false
     @if $debug
         outline: $size $style $color
         outline-offset: -$size
-        // &:hover
-        //     outline-color: $hover
-
-// *
-    // @include border(magenta, lime)
 
 
-//
 // Modal
 //
 body.modal-active
     overflow: hidden
 
 .modal-wrapper
-    // @include border(orange, dashed, 8px)
-
-    // padding: 0 !important
     background: white
     border: 8px solid $indigo-900
 
@@ -93,53 +85,35 @@ body.modal-active
     display: flex
 
 .modal-inner
-    @include border(brown, dashed, 6px)
-
     flex: 1
 
-    // height: 100%
+    margin: 8px
 
     display: flex
     flex-flow: column nowrap
 
-    margin: 8px
-
-    // *
-        // flex: 1
-
     h3
-        // @include border(lime, dashed, 2px)
         margin: 0
         padding: 32px
         text-align: center
 
     .text-wrap
-        @include border(red, dashed, 4px)
         flex: 1
-
 
         @include tablet
             margin: 0 64px
         @include laptop
             margin: 0 96px
 
-
         p
             @include border(magenta, dashed, 2px)
 
 
     .button-wrap
-        // @include border(red, dashed, 2px)
-        // background: yellow
-
-        // margin: 32px
-        // padding: 16px
-
         display: flex
         flex-flow: row nowrap
+
         a
-            // @include border(pink, dashed, 2px)
-            // margin: 0 16px
             &:nth-child(1)
                 margin-right: 4px
             &:nth-child(2)
@@ -158,8 +132,6 @@ body.modal-active
             &:hover
                 background: $indigo-900
                 color: white
-
-
 
 
 .modal-close
