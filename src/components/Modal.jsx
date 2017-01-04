@@ -36,9 +36,9 @@ export default class Modal extends Component {
             },
 
             wrapper: {
-                border: '8px solid #1A237E',
-                background: 'white',
-                flex: 1,
+                // border: '8px solid #1A237E',
+                // background: 'white',
+                // flex: 1,
                 position: 'absolute',
                 top: 80 - this.state.topPad,
                 // padding: '0 32px',
@@ -57,14 +57,15 @@ export default class Modal extends Component {
 
                         <h3 className="">{project.name}</h3>
 
-                        <div>
+                        <div className="text-wrap">
                             {project.description.map( (e,i) => <p key={i}>{e}</p>)}
                         </div>
 
-                        <img src={require(`../images/${project.thumb}`)} alt=""/>
 
-                        <div><a href={`http://${project.site}`} onClick={e => { alert('alert!'); e.preventDefault(); }}>Visit Site</a></div>
-                        <div><a href="">GitHub repo</a></div>
+                        <div className="button-wrap">
+                            <a href={project.site} onClick={e => { e.preventDefault(); window.open(project.site, '_blank'); }}>Site</a>
+                            <a href={project.github} onClick={e => { e.preventDefault(); window.open(project.github, '_blank'); }}>GitHub</a>
+                        </div>
 
                     </div>
 

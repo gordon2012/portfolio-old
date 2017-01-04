@@ -51,15 +51,15 @@ header, footer
 
 // Debug
 //
-$debug: true
-@mixin border ($color: black, $hover: $color, $style: solid, $size: 1px)
+$debug: false
+@mixin border ($color: black, $style: solid, $size: 1px)
     @if $debug
         outline: $size $style $color
         outline-offset: -$size
-        &:hover
-            outline-color: $hover
+        // &:hover
+        //     outline-color: $hover
 
-*
+// *
     // @include border(magenta, lime)
 
 
@@ -70,9 +70,11 @@ body.modal-active
     overflow: hidden
 
 .modal-wrapper
-    // @include border(orange)
+    // @include border(orange, dashed, 8px)
 
     // padding: 0 !important
+    background: white
+    border: 8px solid $indigo-900
 
     right: 24px
     bottom: 24px
@@ -88,22 +90,76 @@ body.modal-active
         bottom: 72px
         left: 72px
 
+    display: flex
+
 .modal-inner
-    @include border(magenta, magenta, dashed, 4px)
+    @include border(brown, dashed, 6px)
 
-    // margin: 0 64px
+    flex: 1
+
+    // height: 100%
+
+    display: flex
+    flex-flow: column nowrap
+
+    margin: 8px
+
+    // *
+        // flex: 1
+
     h3
-        @include border(green)
+        // @include border(lime, dashed, 2px)
         margin: 0
+        padding: 32px
+        text-align: center
 
-    p
-        @include border(red)
+    .text-wrap
+        @include border(red, dashed, 4px)
+        flex: 1
 
-    img
-        @include border(lime, lime, dashed, 2px)
 
-    div
-        // border: 1px solid red
+        @include tablet
+            margin: 0 64px
+        @include laptop
+            margin: 0 96px
+
+
+        p
+            @include border(magenta, dashed, 2px)
+
+
+    .button-wrap
+        // @include border(red, dashed, 2px)
+        // background: yellow
+
+        // margin: 32px
+        // padding: 16px
+
+        display: flex
+        flex-flow: row nowrap
+        a
+            // @include border(pink, dashed, 2px)
+            // margin: 0 16px
+            &:nth-child(1)
+                margin-right: 4px
+            &:nth-child(2)
+                margin-left: 4px
+
+            text-decoration: none
+            flex: 1
+            padding: 8px
+            text-align: center
+
+            border: 4px solid $indigo-900
+            border-radius: 8px
+
+            background: $indigo-50
+            color: $indigo-900
+            &:hover
+                background: $indigo-900
+                color: white
+
+
 
 
 .modal-close
