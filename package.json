@@ -60,8 +60,10 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "deploy": "npm run build && gh-pages -d build",
+    "build-staging": "node scripts/build-staging.js",
+    "build-production": "node scripts/build-production.js",
+    "stage": "npm run build-staging && gh-pages -d build",
+    "deploy": "npm run build-production && surge build gordondoskas.com",
     "cors": "node scripts/cors-anywhere/server.js"
   },
   "jest": {
