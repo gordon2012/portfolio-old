@@ -23,7 +23,7 @@ store.dispatch(setState({
     {
       name: 'Camper Leaderboard',
       description: ['Find out who has the most brownie points on FreeCodeCamp over the past 30 days or all time'],
-      site: 'http://gordon2012.github.io/leaderboard',
+      site: 'http://leaderboard.gordondoskas.com',
       github: 'https://github.com/gordon2012/leaderboard',
       thumb: '1.png'
     },
@@ -31,7 +31,7 @@ store.dispatch(setState({
     {
       name: 'Markdown Previewer',
       description: ['Markdown Previewer allows one to enter markdown into a text box and have a live preview display what it looks like styled.', 'Technologies used: React, Marked, Webpack, Travis CI'],
-      site: 'http://gordon2012.github.io/markdown',
+      site: 'http://markdown.gordondoskas.com',
       github: 'https://github.com/gordon2012/markdown',
       thumb: '2.png'
     },
@@ -39,7 +39,7 @@ store.dispatch(setState({
     {
       name: 'Calculator',
       description: ['A JavaScript powered calculator'],
-      site: 'http://gordon2012.github.io/calculator',
+      site: 'http://calculator.gordondoskas.com',
       github: 'https://github.com/gordon2012/calculator',
       thumb: '3.png'
     },
@@ -47,7 +47,7 @@ store.dispatch(setState({
     {
       name: 'Random Quote Machine',
       description: ['A random quote generator'],
-      site: 'http://gordon2012.github.io/quote',
+      site: 'http://quote.gordondoskas.com',
       github: 'https://github.com/gordon2012/quote',
       thumb: '4.png'
     },
@@ -55,7 +55,7 @@ store.dispatch(setState({
     {
       name: 'Wikipedia Search',
       description: ['An implementation of Wikipedia search that uses its search API'],
-      site: 'http://gordon2012.github.io/wikiviewer',
+      site: 'http://wikiviewer.gordondoskas.com',
       github: 'https://github.com/gordon2012/wikiviewer',
       thumb: '5.png'
     },
@@ -63,7 +63,7 @@ store.dispatch(setState({
     {
       name: 'Twitch.tv Status',
       description: ['An app that monitors the status of Twitch.tv streamers.', 'Technologies used: React, Sass, Webpack'],
-      site: 'http://gordon2012.github.io/twitch',
+      site: 'http://twitch.gordondoskas.com',
       github: 'https://github.com/gordon2012/twitch',
       thumb: '6.png'
     }
